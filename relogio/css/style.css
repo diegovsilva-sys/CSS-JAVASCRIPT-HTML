@@ -1,0 +1,42 @@
+@font-face {
+    font-family: relogio;
+    src: url(/fonts/digital-7.ttf);
+}
+
+body{
+    height:  100vh;
+    background: url(/imagens/Ghost.webp);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    align-items: center;
+    width: fit-content;
+}
+
+.central{
+    background: rgba(233, 233, 236, 0);
+    color: rgb(243, 237, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    backdrop-filter:blur(0px)
+}
+
+.central div{
+    background: rgba(91, 91, 94, 0);
+    color: rgb(129, 117, 117);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    font-family: relogio;
+
+}
+
+.central span{
+    font-size: 120px;
+    font-family: relogio;
+}
