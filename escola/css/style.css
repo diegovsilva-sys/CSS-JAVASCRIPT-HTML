@@ -1,0 +1,125 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Oculta a div vazia do topo */
+div:empty {
+    display: none !important;
+}
+
+/* Centralização do Conteúdo */
+body {
+    min-height: 100vh;
+    background-color: #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Título */
+h1, h2, .titulo {
+    text-align: center;
+    color: #0f172a;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* Inputs das Notas */
+input[type="number"] {
+    width: 280px;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    text-align: center;
+    outline: none;
+    transition: all 0.2s ease;
+    background-color: #ffffff;
+}
+
+input[type="number"]:focus {
+    border-color: #107c41;
+    box-shadow: 0 0 0 3px rgba(16, 124, 65, 0.2);
+}
+
+/* Remove as setinhas dos inputs */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Botão de Ação */
+#botao {
+    width: 280px;
+    background-color: #107c41;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#botao:hover {
+    background-color: #0d6233;
+}
+
+#botao:active {
+    transform: scale(0.98);
+}
+
+/* Cartão do Resultado com Emojis */
+#resultado1, #resultado2, #resultado3 {
+    margin-top: 20px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Classes dinâmicas do JS */
+.aprovado {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 2px solid #86efac;
+}
+
+.reprovado {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    border: 2px solid #fca5a5;
+}
+
+/* Substitua o seletor dos resultados por este */
+#resultado1 {
+    margin-top: 20px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+/* Esconde spans sem texto */
+span:empty {
+    display: none !important;
+}
