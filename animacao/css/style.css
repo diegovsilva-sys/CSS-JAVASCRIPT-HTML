@@ -1,36 +1,65 @@
-#caixa{
-    width: 150px;
-    height: 150px;
-    background: linear-gradient(to right, #ff0000, #000000);
-    border-radius: 50%;
-    margin-top: 150px;
-    animation: pulo 1s infinite;
-}
-
-h1{
+body{
+    background: linear-gradient(to bottom, #a30505, #000000);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    color: #000000;
 }
 
-h2{
-    text-align: center;
-    color: #000000;
+#cenario{
+    background: #0f4c85;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 15px solid #9c6010;
+    margin: auto;
+    overflow: hidden;
 }
 
-.bolaPular {
-animation: pulo 1s infinite;
+#boneco{
+    width: 70px;
+    height: 70px;
+    font-size: 80px;
+    position: absolute;
+    bottom: 27px;
+    left: -40px;
 }
 
-@keyframes pulo{
+#obstaculo{
+    width: 60px;
+    height: 30px;
+    font-size: 50px;
+    position: absolute;
+    bottom: 29px;
+    right: -10px;
+    animation: mover 2s linear infinite;
+}
+@keyframes mover{
     0%{
-        transform:translateY(0);
+        left: 600px;
     }
-
-    50%{
-        transform: translatey(-60px)
-    }
-
+    
     100%{
-        transform: translatey(0)
+        left: -30px;
     }
+}
+
+@keyframes pular{
+    0%{
+        bottom: 3px;
+    }
+    
+    50%{
+        bottom:90px;
+    }
+    
+    100%{
+        bottom: 20px;
+    }
+}
+
+.pulando{
+    animation: pular 0.8s;
 }

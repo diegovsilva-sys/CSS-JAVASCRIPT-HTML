@@ -1,22 +1,26 @@
-//Função
+// DOM
+const boneco = document.querySelector('#boneco');
+posicao = 0
 
-function animar(evento){
+//Evento
+document.addEventListener('keydown', controlar)
+boneco.addEventListener('animationend',parar)
 
-    if(evento.key == ''){
-    bola.classList.add('bolaPular')
+//Ação
+function controlar(evento){
+    if (evento.key == 'ArrowUp') {
+        boneco.classList.add('pulando');
     }
-
-    if(evento.key == 'ArrowDown'){
-    bola.classList.remove('bolaPular')
+    if (evento.key == 'ArrowLeft' & posicao>0) {
+        posicao = posicao - 10;
     }
-
-    if(evento.key == 'ArrowRight'){
-    posicao = posicao+10
-    bola.style.left = posicao + "px"
+    if (evento.key == 'ArrowRight' && posicao< 600) {
+        posicao = posicao + 10;
     }
+    boneco.style.left = posicao + 'px';
 
-    if(evento.key == 'ArrowLeft'){
-    posicao = posicao-10
-    bola.style.left = posicao + "px"
-    }
+}
+
+function parar(){
+    boneco.classList.remove('pulando');
 }
